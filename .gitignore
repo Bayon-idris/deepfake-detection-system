@@ -1,5 +1,4 @@
 data/
-logs/
 processed_data/
 pretrained/*.pth
 __pycache__/
@@ -7,3 +6,7 @@ __pycache__/
 */*/__pycache__/
 *.pyc
 .tensorboard/
+.faceforensics_download_v4
+logs/
+demo/
+README_copy.md

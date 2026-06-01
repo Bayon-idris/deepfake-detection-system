@@ -8,7 +8,7 @@ if not os.getcwd() in sys.path:
     sys.path.append(os.getcwd())
 import random
 
-import simplejson as json
+import json
 from box import Box as edict
 from glob import glob
 import dlib

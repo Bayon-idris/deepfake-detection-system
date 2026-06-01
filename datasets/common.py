@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 import os
 import sys
-import simplejson as json
+import json
 import math
 import random
 
@@ -17,7 +17,7 @@ from package_utils.transform import final_transform
 from package_utils.image_utils import cal_mask_wh, gaussian_radius
 
 
-PREFIX_PATH = '/data/deepfake_cluster/datasets_df/FaceForensics++/c0/'
+PREFIX_PATH = '/home/S21_D/research/LAA-Net/data/FF++/FaceForensics++/c0/'
 
 
 @DATASETS.register_module()
