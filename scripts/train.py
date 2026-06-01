@@ -64,7 +64,8 @@ if __name__=='__main__':
     if 'gpus' in cfg.TRAIN.gpus and cfg.TRAIN.gpus is not None:
         #Only support a single gpu for training now
         devices = torch.device('cuda:1')
-    model = build_model(cfg.MODEL, MODELS).cuda().to(torch.float64)
+    model = build_model(cfg.MODEL, MODELS).cuda()
+    # model = build_model(cfg.MODEL, MODELS).cuda().to(tor ch.float64)
     
     #Loading Dataloader
     start_loading = time.time()

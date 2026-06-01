@@ -1,10 +1,10 @@
 PREPROCESSING:
-  DATASET: Celeb-DFv2
+  DATASET: FF++
   COMPRESSION: c0
   SPLIT: test
-  ROOT: /data/deepfake_cluster/datasets_df/Celeb-DFv2/
-  # FAKETYPE: [Deepfakes, Face2Face, FaceSwap, NeuralTextures]
-  FAKETYPE: [YouTube-real]
+  ROOT: /home/S21_D/research/LAA-Net/data/FF++/FaceForensics++/c0/
+  FAKETYPE: [Original]
+
   IMAGE_SUFFIX: png
   DATA_TYPE: frames
   LABEL: [real]

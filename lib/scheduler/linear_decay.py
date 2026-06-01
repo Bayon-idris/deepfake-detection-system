@@ -6,9 +6,13 @@ from torch.optim.lr_scheduler import _LRScheduler
 
 class LinearDecayLR(_LRScheduler):
     def __init__(self, optimizer, n_epoch, start_decay, last_epoch=-1, booster=2):
-        self.start_decay=start_decay
-        self.n_epoch=n_epoch
+        self.start_decay = start_decay
+        self.n_epoch = n_epoch
         self.booster = booster
+        # Fix: initialize initial_lr for each param group
+        for group in optimizer.param_groups:
+            if 'initial_lr' not in group:
+                group['initial_lr'] = group['lr']
         super(LinearDecayLR, self).__init__(optimizer, last_epoch)
 
     def get_lr(self):

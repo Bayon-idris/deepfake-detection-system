@@ -1,0 +1,9 @@
+data/
+logs/
+processed_data/
+pretrained/*.pth
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.pyc
+.tensorboard/

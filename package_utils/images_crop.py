@@ -15,7 +15,7 @@ from retinaface.utils import vis_annotations
 import torch
 
 
-ROOT = '/data/deepfake_cluster/datasets_df'
+ROOT = '/home/S21_D/research/LAA-Net/data/FF++'
 SAVE_DIR = f'{ROOT}/FaceForensics++/c0'
 IMAGE_H, IMAGE_W, IMAGE_C = 256, 256, 3
 PADDING = 0.25
@@ -74,7 +74,7 @@ def facecrop(model, org_path, save_path, period=1, num_frames=10, dataset='origi
                 face_crop = None
                 score_max = -1
                 for face_idx in range(len(faces)):
-                    x0,y0,x1,y1 = faces[face_idx]['bbox']
+                    x0,y0,x1,y1 = [int(v) for v in faces[face_idx]['bbox']]
                     # landmark = np.array([[x0,y0],[x1,y1]] + faces[face_idx]['landmarks'])
                     face_w = x1 - x0
                     face_h = y1 - y0
