@@ -1,6 +1,6 @@
 data/
 processed_data/
-pretrained/*.pth
+pretrained/
 __pycache__/
 */__pycache__/
 */*/__pycache__/
